@@ -4,7 +4,7 @@ import { APIURL } from './config';
 function AddVerse(props) {
 	const initialVerseState = {
 		body: '',
-		author: 'anonymous',
+		author: 'Anonymous',
 	};
 
 	const [verse, setVerse] = useState(initialVerseState);
@@ -14,7 +14,7 @@ function AddVerse(props) {
 		event.persist();
 		setVerse({
 			...verse,
-			[event.target.body]: event.target.value,
+            [event.target.name]: event.target.value,
 		});
 	};
 
@@ -23,19 +23,35 @@ function AddVerse(props) {
 		const url = `${APIURL}/verses/`;
 
 		fetch(url, {
-			method: 'POST',
+            method: 'POST',
+            mode: 'cors',
 			headers: {
-				'Content-type': 'application/json; charset=UTF=8',
+				'Content-type': 'application/json; charset=UTF-8',
 			},
 			body: JSON.stringify(verse),
 		})
-			.then((response) => response.json())
+            .then((response) => response.json())
+            .then(verse => {
+                console.log('Success:', verse);
+            })
 			.catch(() => {
+                console.log('Error:', error);
 				setError(true);
 			});
 	};
 
-	return <div></div>;
+	return (
+		<form onSubmit={handleSubmit}>
+			<input
+                placeholder='Your Verse'
+                value={verse.body}
+				name='body'
+				type='text'
+                onChange={handleChange}
+            />
+			<input type='submit' value='Submit' />
+		</form>
+	);
 }
 
 export default AddVerse;

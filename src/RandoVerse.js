@@ -18,16 +18,19 @@ function RandoVerse(props) {
 	}, []);
 
     
-    function randNum() {
-        return Math.floor(Math.random() * (verse.length - 1));
-    }
+    // function randNum() {
+    //     return Math.floor(Math.random() * (verse.length - 1));
+    // }
+
+    
+    let randNum = Math.floor(Math.random() * (verse.length - 1));
 	return (
         <div>
 			<ul>{verse.map((verse) => (
-                <li>{verse.body}</li>
+                <li key={verse._id}>{verse.body} -{verse.author}</li>
             ))}</ul>
             {/* console.log(verse); */}
-            <h3>{verse[randNum()].body}</h3>
+            {/* <h3>{verse[randNum].body}</h3> */}
             {/* <button onClick={handleSubmit}>Verse</button> */}
 		</div>
 	);
