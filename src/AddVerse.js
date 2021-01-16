@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { APIURL } from './config';
+import './index.css';
+import stars from './stars.mp4';
 
 function AddVerse(props) {
 	const initialVerseState = {
@@ -14,7 +16,7 @@ function AddVerse(props) {
 		event.persist();
 		setVerse({
 			...verse,
-            [event.target.name]: event.target.value,
+			[event.target.name]: event.target.value,
 		});
 	};
 
@@ -23,34 +25,41 @@ function AddVerse(props) {
 		const url = `${APIURL}/verses/`;
 
 		fetch(url, {
-            method: 'POST',
-            mode: 'cors',
+			method: 'POST',
+			mode: 'cors',
 			headers: {
 				'Content-type': 'application/json; charset=UTF-8',
 			},
 			body: JSON.stringify(verse),
 		})
-            .then((response) => response.json())
-            .then(verse => {
-                console.log('Success:', verse);
-            })
+			.then((response) => response.json())
+			.then((verse) => {
+				console.log('Success:', verse);
+			})
 			.catch(() => {
-                console.log('Error:', error);
+				console.log('Error:', error);
 				setError(true);
 			});
 	};
 
 	return (
-		<form onSubmit={handleSubmit}>
-			<input
-                placeholder='Your Verse'
-                value={verse.body}
-				name='body'
-				type='text'
-                onChange={handleChange}
-            />
-			<input type='submit' value='Submit' />
-		</form>
+		<div>
+			<video autoPlay muted loop id='myVideo'>
+				<source src={stars} type='video/mp4' />
+			</video>
+
+			<form onSubmit={handleSubmit} className='verse-form'>
+				<input
+					placeholder='Your Verse'
+					value={verse.body}
+					name='body'
+					type='text'
+                    onChange={handleChange}
+                    className='input-field'
+				/>
+				<input type='submit' value='Submit' className='input-button' />
+			</form>
+		</div>
 	);
 }
 

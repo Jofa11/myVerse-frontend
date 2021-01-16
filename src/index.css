@@ -1,0 +1,30 @@
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.verse-form {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  
+  padding: 20% 20% 60%;
+}
+
+.input-field {
+  height: 3em;
+  background-color: rgb(187, 134, 236);
+  color: purple;
+  margin-right: 1em;
+}
+
+.input-button {
+  height: 3em;
+  background-color: rgb(187, 134, 236);
+  color: gray;
+}
