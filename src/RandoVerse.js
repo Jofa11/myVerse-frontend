@@ -23,13 +23,13 @@ function RandoVerse(props) {
 
 	return (
 		<div>
-			<ul>
+			{/* <ul>
 				{verse.map((verse) => (
 					<li key={verse._id}>
 						{verse.body} -{verse.author}
 					</li>
 				))}
-			</ul>
+			</ul> */}
 
 			<h3>-{displayedVerse.body}</h3>
 		</div>

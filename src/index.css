@@ -7,24 +7,36 @@
 }
 
 .verse-form {
-  position: fixed;
+  position: relative;
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
   color: #f1f1f1;
   width: 100%;
-  
-  padding: 20% 20% 60%;
+  padding: 20% 20%;
 }
 
 .input-field {
   height: 3em;
   background-color: rgb(187, 134, 236);
-  color: purple;
+  color: rgb(165, 20, 165);
   margin-right: 1em;
+  border-radius: 6%;
 }
 
 .input-button {
   height: 3em;
   background-color: rgb(187, 134, 236);
-  color: gray;
+  color: rgb(165, 20, 165);
+  border-radius: 6%;
+}
+
+.title {
+  color: greenyellow;
+  font-family: Copperplate, sans-serif;
+  font-size: 4em;
+  position: relative;
+  top: 1%;
+  width: 100%;
+  padding: 0 9%;
+  background: rgba(0, 0, 0, 0.5);
 }

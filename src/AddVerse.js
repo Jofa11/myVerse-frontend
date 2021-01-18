@@ -48,6 +48,8 @@ function AddVerse(props) {
 				<source src={stars} type='video/mp4' />
 			</video>
 
+            <h1 className='title'>My Verse</h1>
+
 			<form onSubmit={handleSubmit} className='verse-form'>
 				<input
 					placeholder='Your Verse'
