@@ -4,23 +4,21 @@ import Navbar from './Navbar';
 import stars from './stars.mp4';
 import './index.css';
 
-function RandoVerse(props) {
+function IdVerse({ match }) {
+	const [singleVerse, setSingleVerse] = useState('');
 	const [error, setError] = useState(false);
-	const [displayedVerse, setDisplayedVerse] = useState('');
 
 	useEffect(() => {
-        const url = `${APIURL}/verses`;
+		const url = `${APIURL}/verses/${match.params.id}`;
 		fetch(url)
-        .then((response) => response.json())
-        .then((data) => {
-                let randNum = Math.floor(Math.random() * (data.length - 1));
-				console.log(data);
-                setDisplayedVerse(data[randNum]);
+			.then((response) => response.json())
+			.then((verse) => {
+				setSingleVerse(verse.body);
 			})
 			.catch(() => {
 				setError(true);
 			});
-	}, []);
+	}, [match.params.id]);
 
 	return (
 		<div>
@@ -31,11 +29,9 @@ function RandoVerse(props) {
 			<Navbar path='/navbar' component={Navbar} />
 
 			<h1 className='title'>My Verse</h1>
-
-			<h3 className='single-verse'>{displayedVerse.body}</h3>
-			<h3 className='single-verse'>- {displayedVerse.author}</h3>
+			<h3 className='single-verse'>{singleVerse}</h3>
 		</div>
 	);
 }
 
-export default RandoVerse;
+export default IdVerse;

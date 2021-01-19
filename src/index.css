@@ -40,3 +40,30 @@
   padding: 0 9%;
   background: rgba(0, 0, 0, 0.5);
 }
+
+.nav {
+  background-color: hotpink;
+  color: white;
+  font-family: Copperplate, sans-serif;
+  font-size: 1em;
+  position: relative;
+  
+}
+
+.nav-item {
+  text-decoration: none;
+}
+
+.verse-list {
+  color: white;
+  position: relative;
+  font-size: 1em;
+  font-family: Copperplate, sans-serif;
+}
+
+.single-verse {
+  color: white;
+  position: relative;
+  font-size: 2.5em;
+  font-family: Copperplate, sans-serif;
+}
