@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 import stars from './stars.mp4';
 import './index.css';
 
-function RandoVerse(props) {
+function Home(props) {
 	const [error, setError] = useState(false);
 	const [displayedVerse, setDisplayedVerse] = useState('');
 
@@ -14,13 +14,20 @@ function RandoVerse(props) {
         .then((response) => response.json())
         .then((data) => {
                 let randNum = Math.floor(Math.random() * (data.length - 1));
-				console.log(data);
                 setDisplayedVerse(data[randNum]);
 			})
 			.catch(() => {
 				setError(true);
 			});
 	}, []);
+
+	if (error) {
+		return (
+			<div>
+				Sorry, there was a problem. Please refresh the page.
+			</div>
+		);
+	}
 
 	return (
 		<div>
@@ -38,4 +45,4 @@ function RandoVerse(props) {
 	);
 }
 
-export default RandoVerse;
+export default Home;

@@ -44,7 +44,11 @@ function AddVerse(props) {
 				console.log('Error:', error);
 				setError(true);
 			});
-	};
+    };
+    
+    if (error) {
+			return <div>Sorry, there was a problem. Please refresh the page.</div>;
+		}
 
 	if (createdID) {
 		return <Redirect to={`/verses/${createdID}`} />;

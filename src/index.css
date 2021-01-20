@@ -52,6 +52,7 @@
 
 .nav-item {
   text-decoration: none;
+  padding: 1em;
 }
 
 .verse-list {
@@ -66,4 +67,22 @@
   position: relative;
   font-size: 2.5em;
   font-family: Copperplate, sans-serif;
+}
+
+.id-verse {
+  color: white;
+  position: relative;
+  font-size: 2.5em;
+  font-family: Copperplate, sans-serif;
+  animation-duration: 5s;
+  animation-name: id-anim;
+  animation-delay: 2s;
+}
+
+@keyframes id-anim {
+  0% { font-size: 2.5em; }
+  25% { font-size: 1.8em; }
+  50% { font-size:  1.2em; }
+  75% { font-size: .6em }
+  100% { font-size: 0em }
 }
