@@ -18,7 +18,11 @@ function AllVerses(props) {
 			.catch(() => {
 				setError(true);
 			});
-	}, []);
+    }, []);
+    
+    if (error) {
+			return <div>Sorry, there was a problem. Please refresh the page.</div>;
+		}
 
 	return (
 		<div>
@@ -26,10 +30,13 @@ function AllVerses(props) {
 				<source src={stars} type='video/mp4' />
 			</video>
 
-			<Navbar path='/navbar' component={Navbar} />
+			<nav className='page-head-nav'>
+				<Navbar path='/navbar' component={Navbar} />
+			</nav>
+			<header className='page-head'>
+				<h1 className='title'>My Verse</h1>
+			</header>
 
-			<h1 className='title'>My Verse</h1>
-            
 			<ul>
 				{verse.map((verse) => (
 					<li key={verse._id} className='verse-list'>
