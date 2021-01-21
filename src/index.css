@@ -4,6 +4,7 @@
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
+  z-index: 1;
 }
 
 .verse-form {
@@ -34,25 +35,26 @@
   color: greenyellow;
   font-family: Copperplate, sans-serif;
   font-size: 4em;
-  position: relative;
-  top: 1%;
+  text-shadow: 2px 2px rgb(91, 133, 27);
   width: 100%;
   padding: 0 9%;
   background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
 }
 
 .nav {
+  width: 100%;
   background-color: hotpink;
   color: white;
   font-family: Copperplate, sans-serif;
   font-size: 1em;
-  position: relative;
-  
+  z-index: 2;
 }
 
 .nav-item {
   text-decoration: none;
   padding: 1em;
+  z-index: 2;
 }
 
 .verse-list {
@@ -63,26 +65,81 @@
 }
 
 .single-verse {
-  color: white;
-  position: relative;
+  color: rgba(169, 205, 236, 1);
+  text-shadow: 3px 2px rgb(36, 80, 119);
+  font-size: 3em;
+  font-family: Copperplate, sans-serif;
+  z-index: 2;
+}
+
+.single-verse-a {
+  color: rgba(169, 205, 236, 1);
+  text-shadow: 3px 2px rgb(36, 80, 119);
   font-size: 2.5em;
   font-family: Copperplate, sans-serif;
+  z-index: 2;
 }
 
 .id-verse {
-  color: white;
+  color: rgba(169, 205, 236, 0);
   position: relative;
+  justify-content: center;
   font-size: 2.5em;
   font-family: Copperplate, sans-serif;
-  animation-duration: 5s;
+  animation-duration: 8s;
   animation-name: id-anim;
-  animation-delay: 2s;
+  animation-delay: 1s;
+  /* animation-timing-function: linear; */
 }
 
 @keyframes id-anim {
-  0% { font-size: 2.5em; }
-  25% { font-size: 1.8em; }
-  50% { font-size:  1.2em; }
-  75% { font-size: .6em }
+  0% { font-size: 2.5em; color: rgba(169, 205, 236, 1); }
+  25% { font-size: 1.8em; color: rgba(169, 205, 236, 0.8); }
+  50% { font-size:  1.2em; color: rgba(169, 205, 236, 0.6); }
+  75% { font-size: .6em; color: rgba(169, 205, 236, 0.4); }
   100% { font-size: 0em }
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.about {
+  font-size: 1.2em;
+  color: rgb(245, 216, 247);
+  font-family: Arial, Helvetica, sans-serif;
+  z-index: 2;
+}
+
+.page-head {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.page-head-nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.p-background {
+  width: 80%;
+  text-align: center;
+  background-color: indigo;
+  border: solid 3px rgb(216, 87, 236);
+  border-radius: 3%;
 }
