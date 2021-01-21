@@ -60,9 +60,12 @@ function AddVerse(props) {
 				<source src={stars} type='video/mp4' />
 			</video>
 
-			<Navbar path='/navbar' component={Navbar} />
-
-			<h1 className='title'>My Verse</h1>
+			<nav className='page-head-nav'>
+				<Navbar path='/navbar' component={Navbar} />
+			</nav>
+			<header className='page-head'>
+				<h1 className='title'>My Verse</h1>
+			</header>
 
 			<form onSubmit={handleSubmit} className='verse-form'>
 				<h3>Your Verse</h3>

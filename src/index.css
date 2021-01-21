@@ -34,8 +34,9 @@
 .title {
   color: greenyellow;
   font-family: Copperplate, sans-serif;
+  text-align: center;
   font-size: 4em;
-  text-shadow: 2px 2px rgb(91, 133, 27);
+  text-shadow: 3px 2px rgb(91, 133, 27);
   width: 100%;
   padding: 0 9%;
   background: rgba(0, 0, 0, 0.5);
@@ -44,16 +45,17 @@
 
 .nav {
   width: 100%;
+  text-align: center;
   background-color: hotpink;
-  color: white;
   font-family: Copperplate, sans-serif;
-  font-size: 1em;
+  font-size: 1.5em;
   z-index: 2;
 }
 
 .nav-item {
+  display: inline-block;
   text-decoration: none;
-  padding: 1em;
+  padding: .2em 1em;
   z-index: 2;
 }
 
@@ -67,7 +69,8 @@
 .single-verse {
   color: rgba(169, 205, 236, 1);
   text-shadow: 3px 2px rgb(36, 80, 119);
-  font-size: 3em;
+  font-size: 2.2em;
+  text-align: center;
   font-family: Copperplate, sans-serif;
   z-index: 2;
 }
@@ -75,9 +78,12 @@
 .single-verse-a {
   color: rgba(169, 205, 236, 1);
   text-shadow: 3px 2px rgb(36, 80, 119);
-  font-size: 2.5em;
+  font-size: 2em;
+  text-align: center;
   font-family: Copperplate, sans-serif;
   z-index: 2;
+  margin-top: 0.2em;
+  margin-bottom: 20%;
 }
 
 .id-verse {
@@ -115,7 +121,7 @@
 
 .about {
   font-size: 1.2em;
-  color: rgb(245, 216, 247);
+  color: whitesmoke;
   font-family: Arial, Helvetica, sans-serif;
   z-index: 2;
 }
@@ -129,7 +135,6 @@
 }
 
 .page-head-nav {
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -140,6 +145,24 @@
   width: 80%;
   text-align: center;
   background-color: indigo;
+  opacity: 0.8;
   border: solid 3px rgb(216, 87, 236);
   border-radius: 3%;
+}
+
+@media (min-width: 675px) {
+  .title {
+    font-size: 6em;
+  }
+  .single-verse {
+    font-size: 4em;
+  }
+  .single-verse-a {
+    font-size: 3em;
+    margin-bottom: 10%;
+  }
+  .about {
+    font-size: 1.5em;
+    width: 85%;
+  }
 }
