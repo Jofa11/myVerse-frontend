@@ -44,11 +44,11 @@ function AddVerse(props) {
 				console.log('Error:', error);
 				setError(true);
 			});
-    };
-    
-    if (error) {
-			return <div>Sorry, there was a problem. Please refresh the page.</div>;
-		}
+	};
+
+	if (error) {
+		return <div>Sorry, there was a problem. Please refresh the page.</div>;
+	}
 
 	if (createdID) {
 		return <Redirect to={`/verses/${createdID}`} />;
@@ -66,28 +66,28 @@ function AddVerse(props) {
 			<header className='page-head'>
 				<h1 className='title'>My Verse</h1>
 			</header>
-
-			<form onSubmit={handleSubmit} className='verse-form'>
-				<h3>Your Verse</h3>
-				<input
-					placeholder='Your Verse'
-					value={verse.body}
-					name='body'
-					type='text'
-					onChange={handleChange}
-					className='input-field'
-				/>
-				<h3>Name (optional)</h3>
-				<input
-					placeholder='Name (optional)'
-					value={verse.author}
-					name='author'
-					type='text'
-					onChange={handleChange}
-					className='input-field'
-				/>
-				<input type='submit' value='Submit' className='input-button' />
-			</form>
+			<div className='form-container'>
+				<form onSubmit={handleSubmit} className='verse-form'>
+					<h3 className='form-name'>Your Verse</h3>
+					<input
+						placeholder='Your Verse'
+						name='body'
+						type='text'
+						onChange={handleChange}
+						className='input-field'
+					/>
+					<h3 className='form-name'>Name</h3>
+					<input
+						placeholder='Optional'
+						name='author'
+						type='text'
+						onChange={handleChange}
+						className='input-field-name'
+					/>
+					<br/>
+					<input type='submit' value='Send It' className='input-button' />
+				</form>
+			</div>
 		</div>
 	);
 }

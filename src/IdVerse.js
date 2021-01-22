@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { APIURL } from './config';
+import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import stars from './stars.mp4';
 import './index.css';
@@ -32,11 +33,23 @@ function IdVerse({ match }) {
 				<source src={stars} type='video/mp4' />
 			</video>
 
-			<Navbar path='/navbar' component={Navbar} />
-
-			<h1 className='title'>My Verse</h1>
-			<h3 className='id-verse'>{singleVerse}</h3>
-			<h3 className='id-verse'>- {singleAuthor}</h3>
+			<nav className='page-head-nav'>
+				<Navbar path='/navbar' component={Navbar} />
+			</nav>
+			<header className='page-head'>
+				<h1 className='title'>My Verse</h1>
+			</header>
+			<div className='id-container'>
+				<h3 className='id-verse'>{singleVerse}</h3>
+			</div>
+			<div className='id-author-container'>
+				<h3 className='id-verse'>- {singleAuthor}</h3>
+			</div>
+			<footer className='another'>
+				<Link to='/addverse' className='another-link'>
+					Add another verse
+				</Link>
+			</footer>
 		</div>
 	);
 }

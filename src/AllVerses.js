@@ -36,14 +36,15 @@ function AllVerses(props) {
 			<header className='page-head'>
 				<h1 className='title'>My Verse</h1>
 			</header>
-
-			<ul>
-				{verse.map((verse) => (
-					<li key={verse._id} className='verse-list'>
-						{verse.body} -{verse.author}
-					</li>
-				))}
-			</ul>
+			<div className='list-container'>
+				<ul>
+					{verse.map((verse) => (
+						<li key={verse._id} className='verse-list'>
+							{verse.body} -{verse.author}
+						</li>
+					))}
+				</ul>
+			</div>
 		</div>
 	);
 }
