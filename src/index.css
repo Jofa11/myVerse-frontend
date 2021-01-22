@@ -7,28 +7,59 @@
   z-index: 1;
 }
 
+.form-container {
+  display: flex;
+}
+
 .verse-form {
-  position: relative;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  color: #f1f1f1;
+  text-align: center;
+  color: #d76ae6;
+  text-shadow: 2px 2px rgb(103, 25, 103);
+  font-size: 2.5em;
+  font-family: Copperplate;
   width: 100%;
-  padding: 20% 20%;
+  padding: 5%;
+  z-index: 2;
 }
 
 .input-field {
+  width: 60%;
   height: 3em;
+  font-size: .4em;
+  font-family: Arial, Helvetica, sans-serif;
   background-color: rgb(187, 134, 236);
-  color: rgb(165, 20, 165);
-  margin-right: 1em;
-  border-radius: 6%;
+  color: rgb(151, 18, 151);
+  border: solid 3px rgb(103, 25, 103);
+  border-radius: 3%;
+  margin-bottom: 15%;
+}
+
+.input-field-name {
+  width: 40%;
+  height: 3em;
+  font-size: .4em;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(187, 134, 236);
+  color: rgb(151, 18, 151);
+  border: solid 3px rgb(103, 25, 103);
+  border-radius: 3%;
+  margin-bottom: 15%;
 }
 
 .input-button {
   height: 3em;
-  background-color: rgb(187, 134, 236);
-  color: rgb(165, 20, 165);
-  border-radius: 6%;
+  width: 30%;
+  font-size: .5em;
+  font-family: Copperplate;
+  background-color: rgb(104, 157, 236);
+  color: rgb(48, 24, 133);
+  border: solid 6px rgb(48, 24, 133);
+  border-radius: 10%;
+}
+
+.form-name {
+  padding: 0 5%;
+  margin: 5%;
 }
 
 .title {
@@ -60,10 +91,14 @@
 }
 
 .verse-list {
-  color: white;
   position: relative;
-  font-size: 1em;
-  font-family: Copperplate, sans-serif;
+  list-style-type: none;
+  padding: .5em;
+  width: 80%;
+  color: white;
+  font-size: 1.2em;
+  font-family: Arial, Helvetica, sans-serif;
+  z-index: 2;
 }
 
 .single-verse {
@@ -86,24 +121,62 @@
   margin-bottom: 20%;
 }
 
+.id-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+}
+
+.id-author-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  margin-top: 0;
+}
+
 .id-verse {
   color: rgba(169, 205, 236, 0);
-  position: relative;
-  justify-content: center;
-  font-size: 2.5em;
+  text-align: center;
+  text-shadow: 3px 2px rgba(36, 80, 119, 0);
   font-family: Copperplate, sans-serif;
   animation-duration: 8s;
   animation-name: id-anim;
   animation-delay: 1s;
-  /* animation-timing-function: linear; */
+  z-index: 2;
 }
 
 @keyframes id-anim {
-  0% { font-size: 2.5em; color: rgba(169, 205, 236, 1); }
-  25% { font-size: 1.8em; color: rgba(169, 205, 236, 0.8); }
-  50% { font-size:  1.2em; color: rgba(169, 205, 236, 0.6); }
-  75% { font-size: .6em; color: rgba(169, 205, 236, 0.4); }
+  0% { font-size: 2.5em; width: 80%; color: rgba(169, 205, 236, 1); text-shadow: 3px 2px rgba(36, 80, 119, 1);}
+  25% { font-size: 1.8em; width: 60%; color: rgba(169, 205, 236, 0.8); text-shadow: 3px 2px rgba(36, 80, 119, 0.8);}
+  50% { font-size:  1.2em; width: 40%; color: rgba(169, 205, 236, 0.6); text-shadow: 3px 2px rgba(36, 80, 119, 0.6);}
+  75% { font-size: .6em; width: 20%; color: rgba(169, 205, 236, 0.4); text-shadow: 3px 2px rgba(36, 80, 119, 0.4);}
   100% { font-size: 0em }
+}
+
+.another {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Copperplate, sans-serif;
+  font-size: 1.7em;
+  z-index: 2;
+}
+
+.another-link {
+  color:rgb(10, 215, 247);
+  animation-duration: 12s;
+  animation-name: another-verse;
+  z-index: 2;
+}
+
+@keyframes another-verse {
+  0% {color:rgba(0, 251, 255, 0);}
+  25% {color:rgba(0, 251, 255, 0);}
+  50% {color:rgba(0, 251, 255, 0);}
+  75% {color:rgba(0, 251, 255, 0);}
+  100% {color:rgba(0, 251, 255, 1);}
 }
 
 .center {
@@ -122,6 +195,7 @@
 .about {
   font-size: 1.2em;
   color: whitesmoke;
+  padding: 2%;
   font-family: Arial, Helvetica, sans-serif;
   z-index: 2;
 }
@@ -165,4 +239,40 @@
     font-size: 1.5em;
     width: 85%;
   }
+  .form-name {
+    font-size: 1.6em;
+    margin-bottom: 2%;
+    margin-top: 3%;
+  }
+  .input-field {
+    width: 50%;
+    margin-bottom: 4%;
+    
+  }
+  .input-field-name {
+    width: 30%;
+    margin-bottom: 4%;
+  }
+  .input-button {
+    width: 15%;
+  }
+  .verse-list {
+    padding-left: 4%;
+    font-size: 1.5em;
+  }
+  .another {
+    font-size: 2.5em;
+  }
+}
+
+li:nth-child(odd) {
+  color: rgb(0, 251, 255);
+}
+
+li:nth-child(even) {
+  color: rgb(221, 69, 245);
+}
+
+li:nth-child(3n) {
+  color: rgb(247, 160, 234);
 }
