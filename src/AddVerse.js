@@ -56,7 +56,7 @@ function AddVerse(props) {
 
 	return (
 		<div>
-			<video autoPlay muted loop id='myVideo'>
+			<video autoPlay muted loop playsInline id='myVideo'>
 				<source src={stars} type='video/mp4' />
 			</video>
 
