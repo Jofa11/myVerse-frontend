@@ -1,71 +1,32 @@
-# Getting Started with Create React App
+# [My Verse](https://send-my-verse.herokuapp.com/)
+### Tell the universe whatever you need to get off your chest.
+##### This is a browser based application. It is responsive, built with mobile first design. My Verse is a MERN stack project built for practice as well as, being somewhat therapeutic. I got the idea from wanting to type responses to social media posts, but biting my tongue a lot. I needed a way to say what I wanted and not offend half the people I'm connected to on my social media accounts. The thought of "put it out in the universe... verse... my verse", came to me. I actually enjoy using this app. I hope you will too.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Home Page
+##### This is an image of the home/landing page
+![Home Page](src/images/my-verse-home.png)
 
-## Available Scripts
+### Add Your Verse
+##### Here is the form/page where you add your verse
+![Add Verse](src/images/my-verse-add.png)
 
-In the project directory, you can run:
+### All Verses
+##### A list of all verses added to the app
+![All Verses](src/images/my-verse-all.png)
 
-### `npm start`
+### Wireframe
+![Concept Home](src/images/myVerse1.jpeg)
+![Concept Form](src/images/myVerse2.jpeg)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Technologies Used
+##### This is a MERN stack project. The React frontend utilizes hooks for the components. The styling was done with vanilla CSS. I opted not to use a CSS framework, just to get reps on styling fundamentals. It was styled for a mobile screen first, with media queries to handle larger screens. Both the frontend and backend are hosted on Heroku, the free tier. However I have set up software to ping the site, using cron-job. This keeps the site from going to sleep throughout most of the day.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Code bytes
+###### Some fun code, CSS to make verse sent back from DB, fade off into the universe.
+![CSS Fade](src/images/keyframes.png)
+###### I had an issue using a background video. It worked fine on my laptop, but on mobile the video wouldn't play. Then it would pop up, just the video with no overlay, on a player. No bueno. I found this simple solution, just add the playsInline attribute to the video tag. Worked like a charm.
+![playsInline](src/images/video-inline.png)
 
-### `npm test`
+### Contribution Guidelines
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# myVerse-frontend
+Here is the [link](https://github.com/Jofa11/myVerse-frontend) to the repo. Fork, clone, and send an issue if you have any proposed improvements to the app.
